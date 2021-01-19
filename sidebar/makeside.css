@@ -2,7 +2,7 @@
     --brack : #000000;
     --waite : #ffffff;
     --laght_gray: #b1b1b1;
-
+    --pink:#f8eef7;
     --padding : 30px;
     --margin :12px;
     --font_size:30px;
@@ -42,10 +42,19 @@ header #infonav{ /* side_bar 나오게 하는 버튼 */
    /*  position: absolute;
     top: 10; right: 30px; */
 }
-header .such{
+header .seach{
     position: absolute;
-    right: 100px;
-    top: 25px;
+    display: flex;
+    right: 90px;
+    top: 22px;
+    background-color: var(--pink);
+    padding:7px;
+    border-radius: 15px;
+}
+header .seach #seachtext{
+    background-color: var(--pink);
+    border: none;
+    outline: none;
 }
 
 /* side_bar */
