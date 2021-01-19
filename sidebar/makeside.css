@@ -1,0 +1,97 @@
+:root{
+    --brack : #000000;
+    --waite : #ffffff;
+    --laght_gray: #b1b1b1;
+
+    --padding : 30px;
+    --margin :12px;
+    --font_size:30px;
+
+}
+body{
+    margin: 0;
+}
+
+/* 버튼과 눌렀을 때 모두 라인,줄,컬러 다 없애기 */
+button,
+button:focus{
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background-color: rgba(169, 169, 169, 0.007);
+}
+
+/* header */
+header{
+    background-color: var(--brack);
+    height:33px;
+    display:flex;
+    justify-content: space-between;
+    padding:var(--padding) ;
+    padding-top: 15px;
+}
+header .title{
+    color: var(--waite);
+    size: var(--icon_size);
+    font-size: var(--font_size);
+}
+
+header #infonav{ /* side_bar 나오게 하는 버튼 */
+    color: var(--waite);
+    padding-top: 10px;
+   /*  position: absolute;
+    top: 10; right: 30px; */
+}
+header .such{
+    position: absolute;
+    right: 100px;
+    top: 25px;
+}
+
+/* side_bar */
+nav{
+    width: 300px;
+    height: 100%;
+    background: rgb(13, 25, 70);
+    position: fixed;
+    right: -300px; top: 0;
+    z-index: 1px;
+}
+nav #login{
+    position: absolute;
+    left: 30px;;
+    top: 30px;
+}
+nav #login .in{
+    color: var(--laght_gray);
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 55px;
+    text-align: right;
+}
+nav #login #loginicon{
+    color: var(--waite);
+    position: relative;
+    left: 0px;
+    top: 0.7px;
+}
+nav .menu{
+    position: absolute;
+    top: 80px;
+    color: var(--waite);
+}
+nav #iconx{
+    position: absolute;
+    top: 20px; right: 30px;
+}
+
+@keyframes putside{
+    from{ right: -300px; }
+    to{ right: 0px;}
+}
+@keyframes pullside{
+    from{ right: 0px;}
+    to{ right: -300px;}
+}
+
+
