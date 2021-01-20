@@ -1,11 +1,13 @@
 :root{
     --brack : #000000;
+    --navbrack:#413c41;
     --waite : #ffffff;
     --laght_gray: #b1b1b1;
     --pink:#f8eef7;
     --padding : 30px;
     --margin :12px;
     --font_size:30px;
+    --side_width:330px;
 
 }
 body{
@@ -59,9 +61,9 @@ header .seach #seachtext{
 
 /* side_bar */
 nav{
-    width: 300px;
+    width: var(--side_width);
     height: 100%;
-    background: rgb(13, 25, 70);
+    background: var(--navbrack);
     position: fixed;
     right: -300px; top: 0;
     z-index: 1px;
@@ -69,7 +71,7 @@ nav{
 nav #login{
     position: absolute;
     left: 30px;;
-    top: 30px;
+    top: 10px;
 }
 nav #login .in{
     color: var(--laght_gray);
@@ -84,23 +86,65 @@ nav #login #loginicon{
     left: 0px;
     top: 0.7px;
 }
+.profile{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 85px;
+    top: 100px;
+    width: 300px;
+}
+.profile .title{
+    position: relative;
+    top: 10px;
+    color: burlywood;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Black Han Sans', sans-serif;
+}
+.profile > p{
+    position: relative;
+    right: 30px;
+    text-align: left;
+    color: #cfd2e9;
+    font-family: 'Sunflower', sans-serif;
+}
+.profile > span > img{
+    position: relative;
+    left: 5px;
+    width: 130px; height: 120px;
+    border-radius: 50%;
+    border:4px solid rgba(201, 179, 151, 0.74);
+}
 nav .menu{
     position: absolute;
-    top: 80px;
+    bottom: 30px;
+    right: 0;
     color: var(--waite);
 }
+nav .menu li{
+    width: var(--side_width);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 2px;
+    text-align: center;
+    background-color: rgb(252, 174, 111);
+    border-top: 2px solid var(--brack);
+    
+}
+/* 닫는 버튼  */
 nav #iconx{
     position: absolute;
     top: 20px; right: 30px;
 }
 
 @keyframes putside{
-    from{ right: -300px; }
+    from{ right: -330px}
     to{ right: 0px;}
 }
 @keyframes pullside{
     from{ right: 0px;}
-    to{ right: -300px;}
+    to{ right: -330px;}
 }
 
 
