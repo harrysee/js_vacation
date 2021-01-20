@@ -1,22 +1,27 @@
-:root{
-    --brack : #000000;
-    --navbrack:#413c41;
-    --waite : #ffffff;
-    --laght_gray: #b1b1b1;
-    --pink:#f8eef7;
-    --padding : 30px;
-    --margin :12px;
-    --font_size:30px;
-    --side_width:330px;
+:root {
+    --brack: #000000;
+    /* --navbrack:#413c41; */
+    --navbrack: #526975;
+    --green: #bbc9b8;
+    --list_color: #78909c;
+    --list_text_color: #15252c;
+    --waite: #ffffff;
+    --laght_green: #cbdce4;
+    --pink: #f8eef7;
+    --padding: 30px;
+    --margin: 12px;
+    --font_size: 30px;
+    --side_width: 330px;
 
 }
-body{
+
+body {
     margin: 0;
 }
 
 /* 버튼과 눌렀을 때 모두 라인,줄,컬러 다 없애기 */
 button,
-button:focus{
+button:focus {
     outline: none;
     cursor: pointer;
     border: none;
@@ -24,127 +29,166 @@ button:focus{
 }
 
 /* header */
-header{
+header {
     background-color: var(--brack);
-    height:33px;
-    display:flex;
+    height: 33px;
+    display: flex;
     justify-content: space-between;
-    padding:var(--padding) ;
+    padding: var(--padding);
     padding-top: 15px;
 }
-header .title{
+
+header .title {
     color: var(--waite);
     size: var(--icon_size);
     font-size: var(--font_size);
 }
 
-header #infonav{ /* side_bar 나오게 하는 버튼 */
+header #infonav {
+    /* side_bar 나오게 하는 버튼 */
     color: var(--waite);
     padding-top: 10px;
-   /*  position: absolute;
+    /*  position: absolute;
     top: 10; right: 30px; */
 }
-header .seach{
+
+header .seach {
     position: absolute;
     display: flex;
     right: 90px;
     top: 22px;
     background-color: var(--pink);
-    padding:7px;
+    padding: 7px;
     border-radius: 15px;
 }
-header .seach #seachtext{
+
+header .seach #seachtext {
     background-color: var(--pink);
     border: none;
     outline: none;
 }
 
 /* side_bar */
-nav{
+nav {
     width: var(--side_width);
     height: 100%;
     background: var(--navbrack);
+    border-left: 2px solid #2b353b;
     position: fixed;
-    right: -300px; top: 0;
+    right: -330px;
+    top: 0;
     z-index: 1px;
 }
-nav #login{
+
+nav #login {
     position: absolute;
-    left: 30px;;
+    left: 30px;
+    ;
     top: 10px;
 }
-nav #login .in{
-    color: var(--laght_gray);
+
+nav #login .in {
+    color: var(--laght_green);
     font-size: 14px;
     text-decoration: none;
     line-height: 55px;
     text-align: right;
 }
-nav #login #loginicon{
+
+nav #login #loginicon {
     color: var(--waite);
     position: relative;
     left: 0px;
     top: 0.7px;
 }
-.profile{
+
+nav .profile {
     position: absolute;
     display: flex;
     flex-direction: column;
     left: 85px;
-    top: 100px;
+    top: 95px;
     width: 300px;
 }
-.profile .title{
+
+nav .profile .title {
     position: relative;
     top: 10px;
-    color: burlywood;
+    color: var(--green);
     font-size: 20px;
     text-align: center;
     font-family: 'Black Han Sans', sans-serif;
 }
-.profile > p{
+
+nav .profile>p {
     position: relative;
     right: 30px;
     text-align: left;
-    color: #cfd2e9;
+    color: #e2f1f8;
     font-family: 'Sunflower', sans-serif;
 }
-.profile > span > img{
+
+nav .profile>span>img {
     position: relative;
     left: 5px;
-    width: 130px; height: 120px;
+    width: 130px;
+    height: 120px;
     border-radius: 50%;
-    border:4px solid rgba(201, 179, 151, 0.74);
+    border: 4px solid #a5bfcc;
 }
-nav .menu{
+
+nav .menu {
     position: absolute;
-    bottom: 30px;
+    bottom: 12px;
+    margin: 0;
     right: 0;
     color: var(--waite);
 }
-nav .menu li{
+
+nav .menu li {
     width: var(--side_width);
-    padding-top: 12px;
-    padding-bottom: 12px;
-    margin-bottom: 2px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0;
     text-align: center;
-    background-color: rgb(252, 174, 111);
-    border-top: 2px solid var(--brack);
-    
+    background-color: var(--list_color);
+    border-top: 3px solid #37474f;
+    border-bottom: 3px solid #37474f;
+
 }
+
+nav .menu li a {
+    text-decoration: none;
+    margin: 0;
+    font-family: 'Gugi', cursive;
+    font-size: 17px;
+    /* font-weight: bolder; */
+    color: var(--list_text_color);
+}
+
 /* 닫는 버튼  */
-nav #iconx{
+nav #iconx {
     position: absolute;
-    top: 20px; right: 30px;
+    top: 20px;
+    right: 30px;
 }
 
-@keyframes putside{
-    from{ right: -330px}
-    to{ right: 0px;}
-}
-@keyframes pullside{
-    from{ right: 0px;}
-    to{ right: -330px;}
+@keyframes putside {
+    from {
+        right: -330px
+    }
+
+    to {
+        right: 0px;
+    }
 }
 
+@keyframes pullside {
+    from {
+        right: 0px;
+    }
 
+    to {
+        right: -330px;
+    }
+}
