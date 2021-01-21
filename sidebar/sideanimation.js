@@ -1,6 +1,8 @@
 var sideicon = document.getElementById("infonav");
 var sidepullicon=document.getElementById("closenav");
 var side_bar = document.querySelector("nav");
+
+// 맨 처음 위치와 전위치를 담는 변수선언
 var scrollPosition = document.documentElement.scrollTop;
 
 //info박스들
@@ -37,20 +39,26 @@ document.addEventListener('scroll', function() {
     var documentY = document.documentElement.scrollTop;
     //이전 위치보다 크면 1 (내리는스크롤) / 작으면 -1(올리는 스크롤) 방향구분
     var direction = ((documentY - scrollPosition) >= 0) ? 1 : -1; 
-    var head = document.querySelector("header");
-    //locationNext = info1.offsetTop;
-    //locationlast=start.offsetTop;
+    var head = document.querySelector("header"); //위에 header부분 변수선언
 
+    // 각각 애니매이션 적용
     if(direction ==1){ //내리는 거
         head.style.animationName="dishead";
         head.style.animationDuration = "0.5s"; 
         head.style.animationFillMode = "forwards";  
-    }else if(direction==-1){
-      head.style.animationName="appearhead";
-      head.style.animationDuration = "0.5s"; 
-      head.style.animationFillMode = "forwards";  
+    }else if(direction==-1){ //올리는거
+        head.style.animationName="appearhead";
+        head.style.animationDuration = "0.5s"; 
+        head.style.animationFillMode = "forwards";  
     }
     scrollPosition=document.documentElement.scrollTop;// Update scrollY
 });
 
 
+function moveNext(){
+    var next = document.querySelector(".java").offsetTop;
+    window.scrollTo({
+        top:next,
+        behavior:'smooth'
+    });
+}

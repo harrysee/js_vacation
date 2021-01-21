@@ -8,7 +8,7 @@
     --waite: #ffffff;
     --laght_green: #cbdce4;
     --pink: #f8eef7;
-    --seach_color:#fafeff;
+    --seach_color: #fafeff;
 
     --padding: 30px;
     --margin: 12px;
@@ -32,7 +32,7 @@ button:focus {
 
 /* header */
 header {
-    background-color:#44575c ;
+    background-color: #44575c;
     width: 96%;
     height: 33px;
     display: flex;
@@ -72,6 +72,11 @@ header .seach #seachtext {
     background-color: var(--seach_color);
     border: none;
     outline: none;
+}
+
+header .seach input::placeholder {
+    color: rgba(101, 140, 158, 0.596);
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 /* side_bar */
@@ -179,30 +184,77 @@ nav #iconx {
     right: 30px;
 }
 
-article .info{
+article .info {
     height: 24.3em;
     width: 100%;
     z-index: 1px;
 }
-article .start{
+
+/* start 첫페이지부분 */
+article .start {
     height: 45em;
-    background-color: pink;
+    background-color: #a8cebd;
 }
-article .java{
-    background:red;
+
+article .start .text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 37%;
+    top: 15%;
 }
-article .c{
-    background:rgb(212, 161, 161);
+
+article .start #start {
+    color: #739cd1;
+    font-family: 'Coda Caption', sans-serif;
+    font-size: 6em;
+    text-align: center;
 }
-article .html{
-    background:rgb(0, 140, 255);
+article .start #plustext {
+    display: inline;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    position: relative;
+    top: 46%;
+    left: 43%;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 30px;
+    color: #5a85bd;
+    opacity: 0.3;
+    cursor: pointer;
 }
-article #js{
-    background:rgb(8, 56, 212);
+article .start #plustext:hover{
+    opacity: 1;
 }
-article .python{
-    background:rgb(229, 255, 0);
+
+article .start i {
+    color: rgb(203, 229, 241);
+    z-index: 5px;
+    position: absolute;
+    top: 580px;
+    left: 50%;
 }
+
+article .java {
+    background: red;
+}
+
+article .c {
+    background: rgb(212, 161, 161);
+}
+
+article .html {
+    background: rgb(0, 140, 255);
+}
+
+article #js {
+    background: rgb(8, 56, 212);
+}
+
+article .python {
+    background: rgb(229, 255, 0);
+}
+
 @keyframes putside {
     from {
         right: -330px
@@ -222,13 +274,29 @@ article .python{
         right: -330px;
     }
 }
-@keyframes dishead{
-    from{top:0px; opacity: 1;}
+
+@keyframes dishead {
+    from {
+        top: 0px;
+        opacity: 1;
+    }
+
     /* 50%{opacity:0.5 ;} */
-    to{top:-70px; opacity: 0.0;}
+    to {
+        top: -70px;
+        opacity: 0.0;
+    }
 }
-@keyframes appearhead{
-    from{ top:-70px; opacity: 0;}
+
+@keyframes appearhead {
+    from {
+        top: -70px;
+        opacity: 0;
+    }
+
     /* 50%{opacity:0.5 ;} */
-    to{top:0px; opacity: 1;}
+    to {
+        top: 0px;
+        opacity: 1;
+    }
 }
