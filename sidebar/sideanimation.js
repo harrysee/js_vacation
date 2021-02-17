@@ -2,6 +2,8 @@ var sideicon = document.getElementById("infonav");
 var sidepullicon=document.getElementById("closenav");
 var side_bar = document.querySelector("nav");
 
+
+  
 // 맨 처음 위치와 전위치를 담는 변수선언
 var scrollPosition = document.documentElement.scrollTop;
 
@@ -54,10 +56,26 @@ document.addEventListener('scroll', function() {
     scrollPosition=document.documentElement.scrollTop;// Update scrollY
 });
 
+//스와이퍼
+const slide = new Swiper('.swiper-container', {
+    slidesPerView : 'auto',
+    spaceBetween : 6, 
+    loop:true, //반복시켜주는 것이다. 배너 슬라이더가 3개인데 이거 안해주면 3번째에서 첫번째로 다시 안돌아옴
+
+    pagination:{
+        el:'.swiper-pagination',
+    },
+
+    //양옆에 넘기는 버튼
+    navigation:{
+        nextEI:'.swiper-button-next',
+        prevEI:'.swiper-button-prev',
+    },
+});
 
 function moveNext(){
-    var next = document.querySelector(".java").offsetTop;
-    window.scrollTo({
+    var next = document.querySelector(".java").offsetTop; //자바페이지 top 위치반환
+    window.scrollTo({ //지정된 곳으로 이동시킴
         top:next,
         behavior:'smooth'
     });

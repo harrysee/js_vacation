@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodingFY</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/69c5ea5509.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="makeside.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
@@ -80,33 +85,56 @@
     </nav>
 
     <article>
-        <div class="info start">
-            <span class="text">
-                <p id="start"> S T A R T</p>
-            </span>
-            <p id="plustext">코딩에 관련된 유용한 Tips</p>
-            <!-- <img src="img/green-noback.png" alt="" class="green"> -->
-            <button class="gonext" onclick="moveNext()"><i class="fas fa-chevron-down fa-6x"></i></button>
+        스와이프 버그있음 li 두개일땐 버그남ㅅㅄㅂ
+        <div id="test-slide" class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <span class="text">
+                        <p id="startText"> S T A R T</p>
+                    </span>
+                    <p id="plustext">코딩에 관련된 유용한 Tips</p>
+                    <!-- <img src="img/green-noback.png" alt="" class="green"> -->
+                    <button class="gonext" onclick="moveNext()"><i class="fas fa-chevron-down fa-6x"></i></button>
+                </div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+
+            </div>
         </div>
-        <div class="info java">
-            <span> java 공부 꿀팁!</span>
+
+        <div class="javapage">
+            <div class="info java">
+                <span> java 공부 꿀팁!</span>
+            </div>
+
         </div>
-        <div class="info c">
-            <span>c언어 공부 꿀팁!</span>
+        <div class="cpage">
+            <div class="info c">
+                <span>c언어 공부 꿀팁!</span>
+            </div>
         </div>
-        <div class="info html">
-            <span>html 공부 꿀팁!</span>
+
+        <div class="htmlpage">
+            <div class="info html">
+                <span>html 공부 꿀팁!</span>
+            </div>
         </div>
-        <div class="info js" id="js">
-            <span>JAVASCRIPT 공부 꿀팁!</span>
+
+        <div class="jspage">
+            <div class="info js" id="js">
+                <span>JAVASCRIPT 공부 꿀팁!</span>
+            </div>
         </div>
-        <div class="info python">
-            <span>python 공부 꿀팁!</span>
+
+        <div class="pythonpage">
+            <div class="info python">
+                <span>python 공부 꿀팁!</span>
+            </div>
         </div>
     </article>
 
     <script src="sideanimation.js"></script>
-
+    <script src="jquery.js"></script>
 </body>
 
 </html>

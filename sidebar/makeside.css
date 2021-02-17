@@ -54,6 +54,7 @@ header #infonav {
     /* side_bar 나오게 하는 버튼 */
     color: var(--waite);
     padding-top: 10px;
+    cursor: pointer;
     /*  position: absolute;
     top: 10; right: 30px; */
 }
@@ -88,13 +89,13 @@ nav {
     position: fixed;
     right: -330px;
     top: 0;
-    z-index: 30px;
+    z-index: 50px;
 }
+
 
 nav #login {
     position: absolute;
     left: 30px;
-    ;
     top: 10px;
 }
 
@@ -190,13 +191,29 @@ article .info {
     z-index: 1px;
 }
 
-/* start 첫페이지부분 */
-article .start {
-    height: 45em;
-    background-color: #a8cebd;
+/*start 첫페이지부분 */
+
+article .swiper-container {
+    position: absolute;
+    top: 40px;
+    left: -40px;
+    width: 100%;
+    z-index: 1px;
+    margin: 0;
+    padding-bottom: 0px;
 }
 
-article .start .text {
+article .swiper-container li {
+    height: 43em;
+    width: 100%;
+}
+
+article #start {
+    background-color: #a8cebd;
+    z-index: 1px;
+}
+
+article #start .text {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -204,13 +221,14 @@ article .start .text {
     top: 15%;
 }
 
-article .start #start {
+article #start #startText {
     color: #739cd1;
     font-family: 'Coda Caption', sans-serif;
     font-size: 6em;
     text-align: center;
 }
-article .start #plustext {
+
+article #start #plustext {
     display: inline;
     padding-bottom: 0;
     margin-bottom: 0;
@@ -223,11 +241,12 @@ article .start #plustext {
     opacity: 0.3;
     cursor: pointer;
 }
-article .start #plustext:hover{
+
+article #start #plustext:hover {
     opacity: 1;
 }
 
-article .start i {
+article #start i {
     color: rgb(203, 229, 241);
     z-index: 5px;
     position: absolute;
