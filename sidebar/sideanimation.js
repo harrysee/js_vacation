@@ -62,6 +62,7 @@ const slide = new Swiper('.swiper-container', {
     spaceBetween : 6, 
     loop:true, //반복시켜주는 것이다. 배너 슬라이더가 3개인데 이거 안해주면 3번째에서 첫번째로 다시 안돌아옴
 
+    //밑에 동그라미 모양 현위치
     pagination:{
         el:'.swiper-pagination',
     },
@@ -73,6 +74,7 @@ const slide = new Swiper('.swiper-container', {
     },
 });
 
+//밑으로 내려가는 함수 다음페이지 스크롤
 function moveNext(){
     var next = document.querySelector(".java").offsetTop; //자바페이지 top 위치반환
     window.scrollTo({ //지정된 곳으로 이동시킴

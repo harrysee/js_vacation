@@ -32,6 +32,7 @@ button:focus {
 
 /* header */
 header {
+    z-index: 30;
     background-color: #44575c;
     width: 96%;
     height: 33px;
@@ -41,7 +42,6 @@ header {
     justify-content: space-between;
     padding: var(--padding);
     padding-top: 15px;
-    z-index: 15px;
 }
 
 header .title {
@@ -89,7 +89,7 @@ nav {
     position: fixed;
     right: -330px;
     top: 0;
-    z-index: 50px;
+    z-index: 50;
 }
 
 
@@ -191,33 +191,26 @@ article .info {
     z-index: 1px;
 }
 
-/*start 첫페이지부분 */
-
+/*start 첫페이지스와이프 부분 */
 article .swiper-container {
-    position: absolute;
-    top: 40px;
-    left: -40px;
-    width: 100%;
-    z-index: 1px;
-    margin: 0;
-    padding-bottom: 0px;
+    position: relative;
+    top: 0px;
+    display: flex;
+    z-index: 0; /*이거ㄹㅇㄹㅇㄹㅇ중요함 제발 z-index쓸때 px넣지마라,, */
 }
 
-article .swiper-container li {
-    height: 43em;
-    width: 100%;
-}
-
+/* 스와이프 첫페이지 */
 article #start {
     background-color: #a8cebd;
-    z-index: 1px;
+    width: 100%;
+    height: 45em;
 }
 
 article #start .text {
     position: absolute;
     display: flex;
     flex-direction: column;
-    left: 37%;
+    left: 35%;
     top: 15%;
 }
 
@@ -233,8 +226,8 @@ article #start #plustext {
     padding-bottom: 0;
     margin-bottom: 0;
     position: relative;
-    top: 46%;
-    left: 43%;
+    top: 48%;
+    left: 41%;
     font-family: 'Do Hyeon', sans-serif;
     font-size: 30px;
     color: #5a85bd;
@@ -246,14 +239,15 @@ article #start #plustext:hover {
     opacity: 1;
 }
 
-article #start i {
+article #start i { /*다음페이지 이동 화살표*/
     color: rgb(203, 229, 241);
     z-index: 5px;
     position: absolute;
-    top: 580px;
-    left: 50%;
+    top: 540px;
+    left: 47.5%;
 }
 
+/* 나머지 프로그래밍 언어들 */
 article .java {
     background: red;
 }
