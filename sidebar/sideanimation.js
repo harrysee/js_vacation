@@ -68,15 +68,15 @@ const slide = new Swiper('.swiper-container', {
     },
 
     //양옆에 넘기는 버튼
-    navigation:{
-        nextEI:'.swiper-button-next',
-        prevEI:'.swiper-button-prev',
-    },
+    // navigation:{
+    //     nextEI:'.swiper-button-next',
+    //     prevEI:'.swiper-button-prev',
+    // },
 });
 
 //밑으로 내려가는 함수 다음페이지 스크롤
 function moveNext(){
-    var next = document.querySelector(".java").offsetTop; //자바페이지 top 위치반환
+    var next = document.querySelector(".swiper-container").clientHeight; //자바페이지 top 위치반환
     window.scrollTo({ //지정된 곳으로 이동시킴
         top:next,
         behavior:'smooth'

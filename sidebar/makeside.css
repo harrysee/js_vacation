@@ -14,7 +14,8 @@
     --margin: 12px;
     --font_size: 30px;
     --side_width: 330px;
-
+    --programing_list_size:260px;
+    --pgl_font_size:50px;
 }
 
 body {
@@ -185,12 +186,6 @@ nav #iconx {
     right: 30px;
 }
 
-article .info {
-    height: 24.3em;
-    width: 100%;
-    z-index: 1px;
-}
-
 /*start 첫페이지스와이프 부분 */
 article .swiper-container {
     position: relative;
@@ -243,34 +238,108 @@ article #start i { /*다음페이지 이동 화살표*/
     color: rgb(203, 229, 241);
     z-index: 5px;
     position: absolute;
-    top: 540px;
+    top: 590px;
     left: 47.5%;
+}
+article #start i:hover {
+  animation-duration: 1s;
+  animation-name: bunce;
+  animation-iteration-count: infinite;
 }
 
 /* 나머지 프로그래밍 언어들 */
+article .infopro{   /*전체*/
+    position:absolute;
+    top: 48em;
+    left: 380px;
+    height: 700px;
+}
+article .infopro .info{ /*각각전체*/
+    display: flex;
+    width: var(--programing_list_size);
+    height: var(--programing_list_size);
+    border-radius: 33%;
+}
+article .infopro .info .title{  /*언어이름*/
+    position:absolute;
+    top: 260px;
+    left: 100px;
+    color: rgb(114, 134, 250);
+    font-size: 20px;
+    font-family: 'Fredoka One', cursive;
+}
+article .infopro .info .more{   /*마우스 댔을때 나오는 span*/
+    position:absolute;
+    left: 0px;
+    opacity: 0;
+    width: var(--programing_list_size);
+    height: var(--programing_list_size);
+    border-radius: 33%;
+    z-index: 2;
+}
+article .infopro .info .more p{ /*마우스 댔을때 나오는 more 글자*/
+    line-height: 35px;
+    padding-top: 50px;
+    font-size: var(--pgl_font_size);
+    text-align: center;
+    font-family: 'Akaya Telivigala', cursive;
+    color: #c1edb0;
+}
+
+article .infopro .info .more:hover{ /*hover 적용*/
+    background: rgba(41, 37, 37, 0.527);
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* javapage */
 article .java {
-    background: red;
+    background-image:url(./img/java.jpg);
+    background-size: 260px;
 }
 
+/* cpage */
 article .c {
-    background: rgb(212, 161, 161);
+    background-image:url(./img/c.jpg);
+    background-size: 280px;
+    position: relative;
+    top: -260px;
+    left: 500px;
 }
 
+/* htmlPage */
 article .html {
-    background: rgb(0, 140, 255);
+    background-image:url(./img/html.jpg);
+    background-size: 300px;
+    position: relative;
+    top: -180px;
+    left: -180px;
 }
 
+/* jsPage */
 article #js {
-    background: rgb(8, 56, 212);
+    background-image:url(./img/js.png);
+    background-size: 260px;
+    position: relative;
+    top: -440px;
+    left: 260px;
+}
+article #js > .title{
+    left: 70px;
 }
 
+/* pythonPage */
 article .python {
-    background: rgb(229, 255, 0);
+    background-image:url(./img/python.jpg);
+    background-size: 310px;
+    position: relative;
+    top: -710px;
+    left: 690px;
 }
 
 @keyframes putside {
     from {
-        right: -330px
+        right: -330px 
     }
 
     to {
@@ -288,6 +357,7 @@ article .python {
     }
 }
 
+/* 밑으로 스크롤하면 head 투명하게 애니매이션 */
 @keyframes dishead {
     from {
         top: 0px;
@@ -301,6 +371,7 @@ article .python {
     }
 }
 
+/* 위로 스크롤 할때 적용할 애니매이션 */
 @keyframes appearhead {
     from {
         top: -70px;
@@ -311,5 +382,23 @@ article .python {
     to {
         top: 0px;
         opacity: 1;
+    }
+}
+/*화살표 hover시에 bounce 시킴*/
+@keyframes bunce {
+    0%{
+        top: 590px;
+    }40%{
+        top: 585px;
+    }50%{
+        top: 570px;
+    }60%{
+        top: 560px;
+    }65%{
+        top: 575px;
+    }75%{
+        top: 600px;
+    }100%{
+        top: 590px;
     }
 }

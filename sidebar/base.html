@@ -29,6 +29,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -85,7 +89,7 @@
     </nav>
 
     <article>
-        <!-- 스와이프 버그있음 li 두개일땐 버그남-->
+        <!-- 스와이프 -->
         <div id="test-slide" class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide" id="start">
@@ -96,46 +100,45 @@
                     <!-- <img src="img/green-noback.png" alt="" class="green"> -->
                     <button class="gonext" onclick="moveNext()"><i class="fas fa-chevron-down fa-6x"></i></button>
                 </div>
-                <div class="swiper-slide"></div>
+                <div class="swiper-slide">
+                    <img src="./img/2page.png" alt="" width="100%">
+                </div>
                 <div class="swiper-slide"></div>
             </div>
 
+            <!-- 스와이프 현재 페이지 표시 동그라미 -->
             <div class="swiper-pagination"></div>
 
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <!-- 양옆으로 넘기는 화살표 -->
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
         </div>
 
         <div class="infopro">
-            <div class="javapage">
-                <div class="info java">
-                    <span> java 공부 꿀팁!</span>
-                </div>
+            <div class="firstLine">
+                    <div class="info java">
+                        <span class="title">JAVA</span>
+                        <span class="more"><p> MORE <br/>→</p></span>
+                    </div>
+                    <div class="info c">
+                        <span class="title">C</span>
+                        <span class="more"><p> MORE <br/>→</p></span>
+                    </div>
+            </div>
+                    <div class="info html">
+                        <span class="title">HTML</span>
+                        <span class="more"><p> MORE <br/>→</p></span>
+                    </div>
 
-            </div>
-            <div class="cpage">
-                <div class="info c">
-                    <span>c언어 공부 꿀팁!</span>
-                </div>
-            </div>
+                    <div class="info js" id="js">
+                        <span class="title">JAVASCRIPT</span >
+                            <span class="more"><p> MORE <br/>→</p></span>
+                    </div>
 
-            <div class="htmlpage">
-                <div class="info html">
-                    <span>html 공부 꿀팁!</span>
-                </div>
-            </div>
-
-            <div class="jspage">
-                <div class="info js" id="js">
-                    <span>JAVASCRIPT 공부 꿀팁!</span>
-                </div>
-            </div>
-
-            <div class="pythonpage">
-                <div class="info python">
-                    <span>python 공부 꿀팁!</span>
-                </div>
-            </div>
+                    <div class="info python">
+                        <span class="more"><p> MORE <br/>→</p></span>
+                        <span class="title">PYTHON</span>
+                    </div>
         </div>
     </article>
 
